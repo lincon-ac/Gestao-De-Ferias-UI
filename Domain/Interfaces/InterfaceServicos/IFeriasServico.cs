@@ -9,8 +9,8 @@ namespace Domain.Interfaces.InterfaceServicos
 {
     public interface IFeriasServico
     {
-        Task AdicionarFerias(Ferias ferias);
-        Task AtualizarFerias(Ferias ferias);
+        Task AdicionarFerias(Ferias despesa);
+        Task AtualizarFerias(Ferias despesa);
         Task<object> CarregaGraficos(string emailUsuario);
     }
 }

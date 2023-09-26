@@ -14,6 +14,11 @@ namespace Entities.Entidades
         [ForeignKey("FuncionarioFinanceiro")]
         [Column(Order = 1)]
         public int IdFuncionario { get; set; }
-       // public virtual FuncionarioFinanceiro FuncionarioFinanceiro { get; set; }
+
+        public bool ValidarPropriedadeString(string nome, string v)
+        {
+            throw new NotImplementedException();
+        }
+        // public virtual FuncionarioFinanceiro FuncionarioFinanceiro { get; set; }
     }
 }

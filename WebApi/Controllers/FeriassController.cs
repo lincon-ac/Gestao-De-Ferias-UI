@@ -31,21 +31,21 @@ namespace WebApi.Controllers
 
         [HttpPost("/api/AdicionarFerias")]
         [Produces("application/json")]
-        public async Task<object> AdicionarFerias(Ferias ferias)
+        public async Task<object> AdicionarFerias(Ferias despesa)
         {
-            await _IFeriasServico.AdicionarFerias(ferias);
+            await _IFeriasServico.AdicionarFerias(despesa);
 
-            return ferias;
+            return despesa;
 
         }
 
         [HttpPut("/api/AtualizarFerias")]
         [Produces("application/json")]
-        public async Task<object> AtualizarFerias(Ferias ferias)
+        public async Task<object> AtualizarFerias(Ferias despesa)
         {
-            await _IFeriasServico.AtualizarFerias(ferias);
+            await _IFeriasServico.AtualizarFerias(despesa);
 
-            return ferias;
+            return despesa;
 
         }
 

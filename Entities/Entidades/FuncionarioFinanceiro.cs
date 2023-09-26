@@ -11,6 +11,7 @@ namespace Entities.Entidades
     [Table("FuncionarioFinanceiro")]
     public class FuncionarioFinanceiro : Base
     {
+        public string Matricula { get; set; }
         public int Mes { get; set; }
         public int Ano { get; set; }
         public int DiaFechamento { get; set; }
@@ -18,5 +19,9 @@ namespace Entities.Entidades
         public int MesCopia { get; set; }
         public int AnoCopia { get; set; }
 
+        public bool ValidarPropriedadeString(string nome, string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

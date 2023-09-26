@@ -34,6 +34,11 @@ namespace Entities.Entidades
         [ForeignKey("Departamento")]
         [Column(Order = 1)]
         public int IdDepartamento { get; set; }
+
+        public bool ValidarPropriedadeString(string nome, string v)
+        {
+            throw new NotImplementedException();
+        }
         //public virtual Departamento Departamento { get; set; }
     }
 }

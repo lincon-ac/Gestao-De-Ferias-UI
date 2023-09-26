@@ -14,6 +14,8 @@ namespace WebApi.Controllers
     {
         private readonly InterfaceUsuarioFuncionarioFinanceiro _InterfaceUsuarioFuncionarioFinanceiro;
         private readonly IUsuarioFuncionarioFinanceiroServico _IUsuarioFuncionarioFinanceiroServico;
+        private object matriculaFuncionario;
+
         public UsuarioFuncionarioFinanceiroController(InterfaceUsuarioFuncionarioFinanceiro InterfaceUsuarioFuncionarioFinanceiro,
             IUsuarioFuncionarioFinanceiroServico IUsuarioFuncionarioFinanceiroServico)
         {

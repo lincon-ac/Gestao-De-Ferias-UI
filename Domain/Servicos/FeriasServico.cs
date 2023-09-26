@@ -18,57 +18,57 @@ namespace Domain.Servicos
             _InterfaceFerias = InterfaceFerias;
         }
 
-        public async Task AdicionarFerias(Ferias ferias)
+        public async Task AdicionarFerias(Ferias despesa)
         {
             var data = DateTime.UtcNow;
-            ferias.DataCadastro = data;
-            ferias.Ano = data.Year;
-            ferias.Mes = data.Month;
+            despesa.DataCadastro = data;
+            despesa.Ano = data.Year;
+            despesa.Mes = data.Month;
 
-            var valido = ferias.ValidarPropriedadeString(ferias.Nome, "Nome");
+            var valido = despesa.ValidarPropriedadeString(despesa.Nome, "Nome");
             if (valido)
-                await _InterfaceFerias.Add(ferias);
+                await _InterfaceFerias.Add(despesa);
 
         }
 
-        public async Task AtualizarFerias(Ferias ferias)
+        public async Task AtualizarFerias(Ferias despesa)
         {
             var data = DateTime.UtcNow;
-            ferias.DataAlteracao = data;
+            despesa.DataAlteracao = data;
 
-            if (ferias.Pago)
+            if (despesa.Pago)
             {
-                ferias.DataPagamento = data;
+                despesa.DataPagamento = data;
             }
 
-            var valido = ferias.ValidarPropriedadeString(ferias.Nome, "Nome");
+            var valido = despesa.ValidarPropriedadeString(despesa.Nome, "Nome");
             if (valido)
-                await _InterfaceFerias.Update(ferias);
+                await _InterfaceFerias.Update(despesa);
         }
 
         public async Task<object> CarregaGraficos(string emailUsuario)
         {
-            var feriassUsuario = await _InterfaceFerias.ListarFeriassUsuario(emailUsuario);
-            var feriassAnterior = await _InterfaceFerias.ListarFeriassUsuarioNaoPagasMesesAnterior(emailUsuario);
+            var despesasUsuario = await _InterfaceFerias.ListarFeriassUsuario(emailUsuario);
+            var despesasAnterior = await _InterfaceFerias.ListarFeriassUsuarioNaoPagasMesesAnterior(emailUsuario);
 
-            var feriass_naoPagasMesesAnteriores = feriassAnterior.Any() ?
-                feriassAnterior.ToList().Sum(x => x.Valor) : 0;
+            var despesas_naoPagasMesesAnteriores = despesasAnterior.Any() ?
+                despesasAnterior.ToList().Sum(x => x.Valor) : 0;
 
-            var feriass_pagas = feriassUsuario.Where(d => d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
+            var despesas_pagas = despesasUsuario.Where(d => d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
                 .Sum(x => x.Valor);
 
-            var feriass_pendentes = feriassUsuario.Where(d => !d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
+            var despesas_pendentes = despesasUsuario.Where(d => !d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
                 .Sum(x => x.Valor);
 
-            var investimentos = feriassUsuario.Where(d => d.TipoFerias == Entities.Enums.EnumTipoFerias.Investimento)
+            var investimentos = despesasUsuario.Where(d => d.TipoFerias == Entities.Enums.EnumTipoFerias.Investimento)
                 .Sum(x => x.Valor);
 
             return new
             {
                 sucesso = "OK",
-                feriass_pagas = feriass_pagas,
-                feriass_pendentes = feriass_pendentes,
-                feriass_naoPagasMesesAnteriores = feriass_naoPagasMesesAnteriores,
+                despesas_pagas = despesas_pagas,
+                despesas_pendentes = despesas_pendentes,
+                despesas_naoPagasMesesAnteriores = despesas_naoPagasMesesAnteriores,
                 investimentos = investimentos
             };
 
