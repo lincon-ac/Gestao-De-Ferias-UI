@@ -15,9 +15,9 @@ namespace Entities.Entidades
         [Column(Order = 1)]
         public int IdFuncionario { get; set; }
 
-        public bool ValidarPropriedadeString(string nome, string v)
+        public bool ValidarPropriedadeString(string nome)
         {
-            throw new NotImplementedException();
+            return nome.Length > 1;
         }
         // public virtual FuncionarioFinanceiro FuncionarioFinanceiro { get; set; }
     }

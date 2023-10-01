@@ -1,8 +1,8 @@
 using Domain.Interfaces.Generics;
 using Domain.Interfaces.IDepartamento;
 using Domain.Interfaces.IFerias;
+using Domain.Interfaces.IFuncionario;
 using Domain.Interfaces.InterfaceServicos;
-using Domain.Interfaces.IFuncionarioFinanceiro;
 using Domain.Interfaces.IUsuarioFuncionarioFinanceiro;
 using Domain.Servicos;
 using Entities.Entidades;
@@ -40,14 +40,14 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 builder.Services.AddSingleton(typeof(InterfaceGeneric<>), typeof(RepositoryGenerics<>));
 builder.Services.AddSingleton<InterfaceDepartamento, RepositorioDepartamento>();
 builder.Services.AddSingleton<InterfaceFerias, RepositorioFerias>();
-builder.Services.AddSingleton<InterfaceFuncionarioFinanceiro, RepositorioFuncionarioFinanceiro>();
+builder.Services.AddSingleton<InterfaceFuncionario, RepositorioFuncionario>();
 builder.Services.AddSingleton<InterfaceUsuarioFuncionarioFinanceiro, RepositorioUsuarioFuncionarioFinanceiro>();
 
 
 // SERVIÇO DOMINIO
 builder.Services.AddSingleton<IDepartamentoServico, DepartamentoServico>();
 builder.Services.AddSingleton<IFeriasServico, FeriasServico>();
-builder.Services.AddSingleton<IFuncionarioFinanceiroServico, FuncionarioFinanceiroServico>();
+builder.Services.AddSingleton<IFuncionarioServico, FuncionarioServico>();
 builder.Services.AddSingleton<IUsuarioFuncionarioFinanceiroServico, UsuarioFuncionarioFinanceiroServico>();
 
 

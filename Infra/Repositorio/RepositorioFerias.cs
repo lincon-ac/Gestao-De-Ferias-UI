@@ -1,14 +1,9 @@
 ﻿using Domain.Interfaces.IFerias;
 using Entities.Entidades;
+using Entities.ViewModels;
 using Infra.Configuracao;
 using Infra.Repositorio.Generics;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra.Repositorio
 {
@@ -22,17 +17,15 @@ namespace Infra.Repositorio
             _OptionsBuilder = new DbContextOptions<ContextBase>();
         }
 
-        public async Task<IList<Ferias>> ListarFeriassUsuario(string emailUsuario)
+        public async Task<IList<Ferias>> ListarFeriasUsuario(string emailUsuario)
         {
             using (var banco = new ContextBase(_OptionsBuilder))
             {
                 return await
-                   (from s in banco.FuncionarioFinanceiro
-                    join c in banco.Departamento on s.Id equals c.IdFuncionario
-                    join us in banco.UsuarioFuncionarioFinanceiro on s.Id equals us.IdFuncionario
-                    join d in banco.Ferias on c.Id equals d.IdDepartamento
-                    where us.EmailUsuario.Equals(emailUsuario) && s.Mes == d.Mes && s.Ano == d.Ano
-                    select d).AsNoTracking().ToListAsync();
+                   (from s in banco.Funcionario
+                    join d in banco.Ferias on s.Id equals d.FuncionarioId
+                    select d
+                ).Include(ferias => ferias.funcionario).AsNoTracking().ToListAsync();
             }
         }
 
@@ -41,11 +34,9 @@ namespace Infra.Repositorio
             using (var banco = new ContextBase(_OptionsBuilder))
             {
                 return await
-                   (from s in banco.FuncionarioFinanceiro
-                    join c in banco.Departamento on s.Id equals c.IdFuncionario
-                    join us in banco.UsuarioFuncionarioFinanceiro on s.Id equals us.IdFuncionario
-                    join d in banco.Ferias on c.Id equals d.IdDepartamento
-                    where us.EmailUsuario.Equals(emailUsuario) && d.Mes < DateTime.Now.Month && !d.Pago
+                   (from s in banco.Funcionario
+                    join d in banco.Ferias on s.Id equals d.FuncionarioId
+                    where d.Mes < DateTime.Now.Month && !d.Pago
                     select d).AsNoTracking().ToListAsync();
             }
         }

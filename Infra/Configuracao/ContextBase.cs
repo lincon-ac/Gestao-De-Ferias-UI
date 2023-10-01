@@ -1,11 +1,6 @@
 ﻿using Entities.Entidades;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infra.Configuracao
 {
@@ -15,7 +10,7 @@ namespace Infra.Configuracao
         {
         }
 
-        public DbSet<FuncionarioFinanceiro> FuncionarioFinanceiro { set; get; }
+        public DbSet<Funcionario> Funcionario { set; get; }
         public DbSet<UsuarioFuncionarioFinanceiro> UsuarioFuncionarioFinanceiro { set; get; }
         public DbSet<Departamento> Departamento { set; get; }
         public DbSet<Ferias> Ferias { set; get; }
@@ -29,8 +24,6 @@ namespace Infra.Configuracao
             }
         }
 
-
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<ApplicationUser>().ToTable("AspNetUsers").HasKey(t => t.Id);
@@ -38,14 +31,11 @@ namespace Infra.Configuracao
             base.OnModelCreating(builder);
         }
 
-
         public string ObterStringConexao()
         {
             //return "Data Source=LAPTOP-J599BNQD\\MSSQLSERVER01;Initial Catalog=GESTAO_DE_FERIAS;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
 
-            return "Data Source=LAPTOP-J599BNQD\\SQLEXPRESS;Initial Catalog=GESTAO_DE_FERIAS3;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=True";
+            return "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GESTAO_DE_FERIAS3;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=true";
         }
-
-
     }
 }

@@ -20,14 +20,14 @@ namespace Domain.Servicos
 
         public async Task AdicionarDepartamento(Departamento catagoria)
         {
-            var valido = catagoria.ValidarPropriedadeString(catagoria.Nome, "Nome");
+            var valido = catagoria.ValidarPropriedadeString(catagoria.Nome);
             if (valido)
                 await _interfaceDepartamento.Add(catagoria);
         }
 
         public async Task AtualizarDepartamento(Departamento catagoria)
         {
-            var valido = catagoria.ValidarPropriedadeString(catagoria.Nome, "Nome");
+            var valido = catagoria.ValidarPropriedadeString(catagoria.Nome);
             if (valido)
                 await _interfaceDepartamento.Update(catagoria);
         }

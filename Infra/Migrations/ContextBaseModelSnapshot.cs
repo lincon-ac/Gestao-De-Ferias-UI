@@ -130,6 +130,12 @@ namespace Infra.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("DataEncerramento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DataInicio")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("DataPagamento")
                         .HasColumnType("datetime2");
 
@@ -139,16 +145,11 @@ namespace Infra.Migrations
                     b.Property<bool>("FeriasAntrasada")
                         .HasColumnType("bit");
 
-                    b.Property<int>("IdDepartamento")
-                        .HasColumnType("int")
-                        .HasColumnOrder(1);
+                    b.Property<int>("FuncionarioId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Mes")
                         .HasColumnType("int");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Pago")
                         .HasColumnType("bit");
@@ -156,15 +157,14 @@ namespace Infra.Migrations
                     b.Property<int>("TipoFerias")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("FuncionarioId");
 
                     b.ToTable("Ferias");
                 });
 
-            modelBuilder.Entity("Entities.Entidades.FuncionarioFinanceiro", b =>
+            modelBuilder.Entity("Entities.Entidades.Funcionario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -178,11 +178,19 @@ namespace Infra.Migrations
                     b.Property<int>("AnoCopia")
                         .HasColumnType("int");
 
+                    b.Property<string>("Departamento")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("DiaFechamento")
                         .HasColumnType("int");
 
                     b.Property<bool>("GerarCopiaFerias")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Matricula")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Mes")
                         .HasColumnType("int");
@@ -196,7 +204,7 @@ namespace Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FuncionarioFinanceiro");
+                    b.ToTable("Funcionario");
                 });
 
             modelBuilder.Entity("Entities.Entidades.UsuarioFuncionarioFinanceiro", b =>
@@ -365,15 +373,26 @@ namespace Infra.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Entities.Entidades.Ferias", b =>
+                {
+                    b.HasOne("Entities.Entidades.Funcionario", "funcionario")
+                        .WithMany()
+                        .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("funcionario");
+                });
+
             modelBuilder.Entity("Entities.Entidades.UsuarioFuncionarioFinanceiro", b =>
                 {
-                    b.HasOne("Entities.Entidades.FuncionarioFinanceiro", "FuncionarioFinanceiro")
+                    b.HasOne("Entities.Entidades.Funcionario", "Funcionario")
                         .WithMany()
                         .HasForeignKey("IdFuncionario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("FuncionarioFinanceiro");
+                    b.Navigation("Funcionario");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -1,23 +1,22 @@
 ﻿using Entities.Enums;
-using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities.Entidades
 {
-
     [Table("Ferias")]
-    public  class Ferias : Base
+    public class Ferias
     {
-
-        public decimal Valor { get; set; }
+        [Display(Name = "Código")]
+        [Key]
+        public int Id { get; set; }
         public int Mes { get; set; }
         public int Ano { get; set; }
 
         public EnumTipoFerias TipoFerias { get; set; }
+
+        public DateTime DataInicio { get; set; }
+        public DateTime DataEncerramento { get; set; }
 
         public DateTime DataCadastro { get; set; }
 
@@ -31,14 +30,8 @@ namespace Entities.Entidades
 
         public bool FeriasAntrasada { get; set; }
 
-        [ForeignKey("Departamento")]
-        [Column(Order = 1)]
-        public int IdDepartamento { get; set; }
-
-        public bool ValidarPropriedadeString(string nome, string v)
-        {
-            throw new NotImplementedException();
-        }
-        //public virtual Departamento Departamento { get; set; }
+        [ForeignKey("Funcionario")]
+        public int FuncionarioId { get; set; }
+        public virtual Funcionario funcionario { get; set; }
     }
 }
