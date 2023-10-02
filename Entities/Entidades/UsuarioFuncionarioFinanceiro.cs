@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities.Entidades
 {
@@ -17,9 +12,9 @@ namespace Entities.Entidades
         public bool FuncionarioAtual { get; set; }
 
 
-        [ForeignKey("FuncionarioFinanceiro")]
+        [ForeignKey("Funcionario")]
         [Column(Order = 1)]
         public int IdFuncionario { get; set; }
-        public virtual FuncionarioFinanceiro FuncionarioFinanceiro { get; set; }
+        public virtual Funcionario Funcionario { get; set; }
     }
 }

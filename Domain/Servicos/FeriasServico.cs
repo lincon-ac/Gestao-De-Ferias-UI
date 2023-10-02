@@ -1,11 +1,7 @@
 ﻿using Domain.Interfaces.IFerias;
 using Domain.Interfaces.InterfaceServicos;
 using Entities.Entidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Entities.ViewModels;
 
 namespace Domain.Servicos
 {
@@ -13,63 +9,97 @@ namespace Domain.Servicos
     {
 
         private readonly InterfaceFerias _InterfaceFerias;
+
         public FeriasServico(InterfaceFerias InterfaceFerias)
         {
             _InterfaceFerias = InterfaceFerias;
         }
 
-        public async Task AdicionarFerias(Ferias despesa)
+        public async Task AdicionarFerias(FeriasFuncionarioViewModel ferias)
         {
             var data = DateTime.UtcNow;
-            despesa.DataCadastro = data;
-            despesa.Ano = data.Year;
-            despesa.Mes = data.Month;
+            ferias.DataCadastro = data;
+            ferias.Ano = data.Year;
+            ferias.Mes = data.Month;
 
-            var valido = despesa.ValidarPropriedadeString(despesa.Nome, "Nome");
-            if (valido)
-                await _InterfaceFerias.Add(despesa);
-
+            await _InterfaceFerias.Add(new Ferias()
+            {
+                Mes = ferias.Mes,
+                Ano = ferias.Ano,
+                DataAlteracao = ferias.DataAlteracao,
+                DataCadastro = ferias.DataCadastro,
+                DataEncerramento = ferias.DataEncerramento,
+                DataInicio = ferias.DataInicio,
+                DataPagamento = ferias.DataPagamento,
+                DataVencimento = ferias.DataVencimento,
+                FeriasAntrasada = ferias.FeriasAntrasada,
+                FuncionarioId = ferias.FuncionarioId,
+                Pago = ferias.Pago,
+                TipoFerias = ferias.TipoFerias,
+                funcionario = null
+            });
         }
 
-        public async Task AtualizarFerias(Ferias despesa)
+        public async Task AtualizarFerias(FeriasFuncionarioViewModel ferias)
         {
-            var data = DateTime.UtcNow;
-            despesa.DataAlteracao = data;
+            Ferias currentferias = await _InterfaceFerias.GetEntityById(ferias.Id);
 
-            if (despesa.Pago)
+            if (currentferias == null)
             {
-                despesa.DataPagamento = data;
+                throw new Exception("Férias não encontrada");
+            };
+
+            DateTime data = DateTime.UtcNow;
+            ferias.DataAlteracao = data;
+
+            if (ferias.Pago)
+            {
+                ferias.DataPagamento = data;
             }
 
-            var valido = despesa.ValidarPropriedadeString(despesa.Nome, "Nome");
-            if (valido)
-                await _InterfaceFerias.Update(despesa);
+            await _InterfaceFerias.Update(new Ferias()
+            {
+                Id = ferias.Id,
+                Mes = ferias.Mes,
+                Ano = ferias.Ano,
+                TipoFerias = ferias.TipoFerias,
+                Pago = ferias.Pago,
+                DataVencimento = ferias.DataVencimento,
+                DataPagamento = ferias.DataPagamento,
+                DataAlteracao = ferias.DataAlteracao,
+                DataEncerramento = ferias.DataEncerramento,
+                DataInicio = ferias.DataInicio,
+                FeriasAntrasada = ferias.FeriasAntrasada,
+                FuncionarioId = ferias.FuncionarioId,
+                DataCadastro = ferias.DataCadastro,
+                funcionario = null
+            });
         }
 
         public async Task<object> CarregaGraficos(string emailUsuario)
         {
-            var despesasUsuario = await _InterfaceFerias.ListarFeriassUsuario(emailUsuario);
-            var despesasAnterior = await _InterfaceFerias.ListarFeriassUsuarioNaoPagasMesesAnterior(emailUsuario);
+            //var despesasUsuario = await _InterfaceFerias.ListarFeriassUsuario(emailUsuario);
+            //var despesasAnterior = await _InterfaceFerias.ListarFeriassUsuarioNaoPagasMesesAnterior(emailUsuario);
 
-            var despesas_naoPagasMesesAnteriores = despesasAnterior.Any() ?
-                despesasAnterior.ToList().Sum(x => x.Valor) : 0;
+            //var despesas_naoPagasMesesAnteriores = despesasAnterior.Any() ?
+            //    despesasAnterior.ToList().Sum(x => x.Valor) : 0;
 
-            var despesas_pagas = despesasUsuario.Where(d => d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
-                .Sum(x => x.Valor);
+            //var despesas_pagas = despesasUsuario.Where(d => d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
+            //    .Sum(x => x.Valor);
 
-            var despesas_pendentes = despesasUsuario.Where(d => !d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
-                .Sum(x => x.Valor);
+            //var despesas_pendentes = despesasUsuario.Where(d => !d.Pago && d.TipoFerias == Entities.Enums.EnumTipoFerias.Contas)
+            //    .Sum(x => x.Valor);
 
-            var investimentos = despesasUsuario.Where(d => d.TipoFerias == Entities.Enums.EnumTipoFerias.Investimento)
-                .Sum(x => x.Valor);
+            //var investimentos = despesasUsuario.Where(d => d.TipoFerias == Entities.Enums.EnumTipoFerias.Investimento)
+            //    .Sum(x => x.Valor);
 
             return new
             {
                 sucesso = "OK",
-                despesas_pagas = despesas_pagas,
-                despesas_pendentes = despesas_pendentes,
-                despesas_naoPagasMesesAnteriores = despesas_naoPagasMesesAnteriores,
-                investimentos = investimentos
+                //despesas_pagas = despesas_pagas,
+                //despesas_pendentes = despesas_pendentes,
+                //despesas_naoPagasMesesAnteriores = despesas_naoPagasMesesAnteriores,
+                //investimentos = investimentos
             };
 
         }

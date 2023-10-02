@@ -1,38 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Infra\\Infra.csproj": {}
+    "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Domain\\Domain.csproj": {
+    "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\linco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\linco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj"
+              "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj"
               }
             }
           }
@@ -62,31 +66,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj": {
+    "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\linco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\linco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -126,42 +134,46 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Infra\\Infra.csproj": {
+    "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\linco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Infra\\obj\\",
+        "projectPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Infra\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\linco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Domain\\Domain.csproj"
+              "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\linco\\OneDrive\\Área de Trabalho\\projeto-psi-pleno\\GestaoDeFeriasAPI\\Entities\\Entities.csproj"
+              "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\eduar\\source\\repos\\Gestao_De_Ferias_API\\Entities\\Entities.csproj"
               }
             }
           }
@@ -197,7 +209,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -82,3 +82,15 @@ C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\En
 C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\refint\Entities.dll
 C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\ref\Entities.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\bin\Debug\net7.0\Entities.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\bin\Debug\net7.0\Entities.pdb
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.pdb
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\ref\Entities.dll

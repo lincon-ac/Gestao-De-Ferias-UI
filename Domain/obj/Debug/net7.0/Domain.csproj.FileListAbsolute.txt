@@ -100,3 +100,18 @@ C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Do
 C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\linco\OneDrive\Área de Trabalho\projeto-psi-pleno\GestaoDeFeriasAPI\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\bin\Debug\net7.0\Entities.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\bin\Debug\net7.0\Entities.pdb
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.csproj.CopyComplete
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Domain\obj\Debug\net7.0\ref\Domain.dll
