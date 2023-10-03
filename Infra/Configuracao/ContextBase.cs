@@ -35,7 +35,7 @@ namespace Infra.Configuracao
         {
             //return "Data Source=LAPTOP-J599BNQD\\MSSQLSERVER01;Initial Catalog=GESTAO_DE_FERIAS;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
 
-            return "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=GESTAO_DE_FERIAS3;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=true";
+            return "Data Source=LAPTOP-J599BNQD\\SQLEXPRESS;Initial Catalog=BANCO_FERIAS;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=true";
         }
     }
 }

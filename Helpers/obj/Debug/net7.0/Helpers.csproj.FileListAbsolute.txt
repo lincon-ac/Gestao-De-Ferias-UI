@@ -92,3 +92,14 @@ C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Helpers\obj\Debug\net7.0\Helper
 C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Helpers\obj\Debug\net7.0\refint\Helpers.dll
 C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Helpers\obj\Debug\net7.0\Helpers.pdb
 C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Helpers\obj\Debug\net7.0\ref\Helpers.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\bin\Debug\net7.0\Helpers.deps.json
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\bin\Debug\net7.0\Helpers.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\bin\Debug\net7.0\Helpers.pdb
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\Helpers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\Helpers.AssemblyInfoInputs.cache
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\Helpers.AssemblyInfo.cs
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\Helpers.csproj.CoreCompileInputs.cache
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\Helpers.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\refint\Helpers.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\Helpers.pdb
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Helpers\obj\Debug\net7.0\ref\Helpers.dll

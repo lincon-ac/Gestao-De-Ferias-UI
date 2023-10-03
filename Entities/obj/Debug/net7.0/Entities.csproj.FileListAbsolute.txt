@@ -94,3 +94,15 @@ C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entit
 C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\refint\Entities.dll
 C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\Entities.pdb
 C:\Users\eduar\Source\Repos\Gestao_De_Ferias_API\Entities\obj\Debug\net7.0\ref\Entities.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\bin\Debug\net7.0\Entities.deps.json
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\bin\Debug\net7.0\Entities.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\bin\Debug\net7.0\Entities.pdb
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.csproj.AssemblyReference.cache
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.AssemblyInfoInputs.cache
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.AssemblyInfo.cs
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\refint\Entities.dll
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\Entities.pdb
+C:\Users\linco\OneDrive\Área de Trabalho\sistema-de-ferias\GestaoDeFeriasAPI\Entities\obj\Debug\net7.0\ref\Entities.dll
