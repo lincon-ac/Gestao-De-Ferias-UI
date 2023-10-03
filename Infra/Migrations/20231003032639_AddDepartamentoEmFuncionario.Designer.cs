@@ -4,6 +4,7 @@ using Infra.Configuracao;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Migrations
 {
     [DbContext(typeof(ContextBase))]
-    partial class ContextBaseModelSnapshot : ModelSnapshot
+    [Migration("20231003032639_AddDepartamentoEmFuncionario")]
+    partial class AddDepartamentoEmFuncionario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,6 +103,10 @@ namespace Infra.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("IdFuncionario")
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -171,6 +178,9 @@ namespace Infra.Migrations
                     b.Property<int>("Ano")
                         .HasColumnType("int");
 
+                    b.Property<int>("AnoCopia")
+                        .HasColumnType("int");
+
                     b.Property<int>("DepartamentoId")
                         .HasColumnType("int");
 
@@ -185,6 +195,9 @@ namespace Infra.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Mes")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MesCopia")
                         .HasColumnType("int");
 
                     b.Property<string>("Nome")
