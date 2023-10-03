@@ -20,11 +20,8 @@ namespace Infra.Repositorio
             using (var banco = new ContextBase(_OptionsBuilder))
             {
                 return await
-                    (from s in banco.Funcionario
-                     join c in banco.Departamento on s.Id equals c.IdFuncionario
-                     join us in banco.UsuarioFuncionarioFinanceiro on s.Id equals us.IdFuncionario
-                     where us.EmailUsuario.Equals(emailUsuario) && us.FuncionarioAtual
-                     select c).AsNoTracking().ToListAsync();
+                    (from s in banco.Departamento
+                     select s).AsNoTracking().ToListAsync();
             }
         }
     }

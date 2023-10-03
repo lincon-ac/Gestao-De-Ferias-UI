@@ -13,7 +13,7 @@ namespace Domain.Servicos
             _interfaceFuncionario = interfaceFuncionario;
         }
 
-        public async Task AdicionarFuncionarioFinanceiro(Funcionario funcionario)
+        public async Task<Funcionario> AdicionarFuncionarioFinanceiro(Funcionario funcionario)
         {
             var valido = funcionario.ValidarPropriedadeString(funcionario.Nome);
 
@@ -25,12 +25,12 @@ namespace Domain.Servicos
                 funcionario.Matricula = funcionario.Matricula;
                 funcionario.Ano = data.Year;
                 funcionario.Mes = data.Month;
-                funcionario.AnoCopia = data.Year;
-                funcionario.MesCopia = data.Month;
                 funcionario.GerarCopiaFerias = true;
 
-                await _interfaceFuncionario.Add(funcionario);
+                return await _interfaceFuncionario.AdicionarFuncionario(funcionario);
             }
+
+            return null;
         }
 
         public async Task AtualizarFuncionarioFinanceiro(Funcionario funcionario)

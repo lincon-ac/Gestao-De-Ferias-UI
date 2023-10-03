@@ -3,6 +3,7 @@ using Entities.Entidades;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Domain.Interfaces.IFuncionario;
+using Entities.ViewModels;
 
 namespace WebApi.Controllers
 {
@@ -29,18 +30,44 @@ namespace WebApi.Controllers
 
         [HttpPost("/api/AdicionarFuncionarioFinanceiro")]
         [Produces("application/json")]
-        public async Task<object> AdicionarFuncionarioFinanceiro(Funcionario funcionario)
+        public async Task<Funcionario> AdicionarFuncionarioFinanceiro(FuncionarioViewModel funcionario)
         {
-            await _IFuncionarioServico.AdicionarFuncionarioFinanceiro(funcionario);
+            Funcionario saveFuncionario = await _IFuncionarioServico.AdicionarFuncionarioFinanceiro(new Funcionario()
+            {
+                NomePropriedade = funcionario.NomePropriedade,
+                Id = funcionario.Id,
+                Nome = funcionario.Nome,
+                Ano = funcionario.Ano,
+                Mes = funcionario.Mes,
+                Matricula = funcionario.Matricula,
+                DiaFechamento = funcionario.DiaFechamento,
+                GerarCopiaFerias = funcionario.GerarCopiaFerias,
+                DepartamentoId = funcionario.DepartamentoId,
+                Departamento = null,
+                mensagem = null,
+            });
 
-            return funcionario;
+            return saveFuncionario;
         }
 
         [HttpPut("/api/AtualizarFuncionarioFinanceiro")]
         [Produces("application/json")]
-        public async Task<object> AtualizarFuncionarioFinanceiro(Funcionario funcionario)
+        public async Task<object> AtualizarFuncionarioFinanceiro(FuncionarioViewModel funcionario)
         {
-            await _IFuncionarioServico.AtualizarFuncionarioFinanceiro(funcionario);
+            await _IFuncionarioServico.AtualizarFuncionarioFinanceiro(new Funcionario()
+            {
+                NomePropriedade = funcionario.NomePropriedade,
+                Id = funcionario.Id,
+                Nome = funcionario.Nome,
+                Ano = funcionario.Ano,
+                Mes = funcionario.Mes,
+                Matricula = funcionario.Matricula,
+                DiaFechamento = funcionario.DiaFechamento,
+                GerarCopiaFerias = funcionario.GerarCopiaFerias,
+                DepartamentoId = funcionario.DepartamentoId,
+                Departamento = null,
+                mensagem = null,
+            });
 
             return Task.FromResult(funcionario);
         }

@@ -46,7 +46,7 @@ namespace WebApi.Controllers
                        FuncionarioAtual = true
                    });
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return Task.FromResult(false);
             }
